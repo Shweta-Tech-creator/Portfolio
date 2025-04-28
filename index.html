@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Introduction - Shweta Kadam</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #1f242d;
+      overflow-x: hidden;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 25px 9%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: slateblue;
+      z-index: 100;
+    }
+    .navbar .logo {
+      font-size: 35px;
+      font-weight: 700;
+    }
+    .navbar ul {
+      display: flex;
+    }
+    .navbar ul li {
+      list-style: none;
+      margin-left: 40px;
+    }
+    .navbar ul li a {
+      font-size: 22px;
+      font-weight: 500;
+      transition: .5s;
+    }
+    .navbar ul li:hover a,
+    .navbar ul li.active a {
+      color: #7cf03d;
+    }
+
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100vh;
+      padding: 100px 9% 0;
+      color: #fff;
+      flex-wrap: wrap;
+    }
+    .home-info {
+      max-width: 700px;
+    }
+    .home-info h1 {
+      font-size: 70px;
+      margin-bottom: 10px;
+    }
+    .home-info h2 {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+    .home-info p {
+      font-size: 22px;
+      margin-bottom: 30px;
+      line-height: 1.8;
+    }
+    .btn-sci {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #7cf03d;
+      border: 2px solid #7cf03d;
+      color: #1f242d;
+      font-weight: 600;
+      font-size: 20px;
+      box-shadow: 0 0 10px #7cf03d;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #fff;
+      color: #1f242d;
+    }
+    .sci a {
+      display: inline-flex;
+      padding: 12px;
+      border: 2px solid #7cf03d;
+      border-radius: 50%;
+      font-size: 26px;
+      color: #7cf03d;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+    .sci a:hover {
+      color: #1f242d;
+      background: #7cf03d;
+    }
+
+    .home-img {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+    .img-box {
+      width: 400px;
+      height: 550px;
+      border: 6px solid #7cf03d;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 30px #7cf03d;
+      background: #1f242d;
+      transition: transform 0.3s ease;
+    }
+    .img-box:hover {
+      transform: scale(1.05);
+    }
+    .img-box img {
+      width: 110%;
+      height: 120%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .text-animate {
+      position: relative;
+      color: #7cf03d;
+      font-size: 45px;
+      font-weight: 600;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #7cf03d;
+      animation: typing 4s steps(20) infinite alternate, blink 0.7s step-end infinite;
+    }
+    @keyframes typing {
+      0% { width: 0 }
+      100% { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    /* Improved About Section */
+.about {
+    min-height: 100vh;
+    padding: 120px 9% 50px;
+    background: #323946;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 55px;
+    margin-bottom: 40px;
+    color: #7cf03d;
+    position: relative;
+  }
+  
+  .about h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #7cf03d;
+    margin: 12px auto 0;
+    border-radius: 2px;
+  }
+  
+  .about-container {
+    background: #1f242d;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(124, 240, 61, 0.3);
+    max-width: 900px;
+    width: 100%;
+    text-align: left;
+    transition: transform 0.3s;
+  }
+  
+  .about-container:hover {
+    transform: translateY(-10px);
+  }
+  
+  .about-container p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #cdd4e7;
+  }
+  /* Project Section Styling */
+.projects {
+    min-height: 100vh;
+    background: #1f242d;
+    padding: 120px 9% 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.projects .heading {
+    font-size: 55px;
+    color: #7cf03d;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.projects .heading::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #7cf03d;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: #323946;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(124, 240, 61, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(124, 240, 61, 0.4);
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #7cf03d;
+}
+
+.project-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cdd4e7;
+}
+
+
+
+ 
+
+  /* Responsive Fix for Small Devices */
+  @media (max-width: 768px) {
+    .skills-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 25px;
+      text-align: center;
+    }
+    .about-container p {
+      font-size: 18px;
+    }
+  }
+  
+    @media (max-width: 991px) {
+      .home {
+        flex-direction: column;
+        text-align: center;
+      }
+      .home-info {
+        margin-bottom: 30px;
+      }
+      .home-img {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="#" class="logo">Portfolio.</a>
+    <ul>
+      <li class="active"><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li> <!-- Link updated to #about -->
+      <li><a href="#Project">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <section class="home" id="home">
+    <div class="home-info">
+      <h1>Shweta Kadam</h1>
+      <h2>I'm a <span class="text-animate">Frontend Developer</span></h2>
+      <p>Hello! I'm Shweta Kadam, a passionate first-year BTech student who loves coding, learning new technologies, and building creative projects. 
+        I'm constantly exploring fields like AI, web development, and innovation. 
+        With a positive attitude and a strong drive to succeed, I aim to turn my ideas into impactful solutions.
+      </p>
+  
+      <div class="btn-sci">
+        <a href="#" class="btn">Download CV</a>
+        <div class="sci">
+          <a href="https://www.linkedin.com/in/sweta-kadam-5851a4323/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://github.com/Shweta-Tech-creator" target="_blank"><i class='bx bxl-github'></i></a>
+          <a href="#"><i class='bx bxl-snapchat'></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="home-img">
+      <div class="img-box">
+        <img src="swetttta-Photoroom.png" alt="Shweta Kadam Image">
+      </div>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <p>I’m Shweta Kadam, a first-year BTech student driven by a passion for technology, innovation, and creativity. From building immersive AR/VR experiences to exploring the power of Generative AI, I’m always eager to learn and experiment with new tools that can shape the future.<br>
+
+        I’ve already had the opportunity to:<br>
+        ✅ Break a Guinness World Record at Mumbai Hacks 🏆<br>
+        ✅ Earn certifications in AR/VR (BharatXR) and Generative AI<br>
+        ✅ Build exciting projects like Medici (healthcare assistant) and Kadam Chromatics (startup initiative)<br>
+        
+        
+        With a strong foundation in Java, HTML/CSS, and DBMS, I’m on a mission to create impactful, user-friendly tech experiences. Whether it's coding, collaborating, or presenting ideas—I love bringing visions to life. 🚀</p>
+    </div>
+  </section>
+
+  <!-- Add this Projects Section below About Section -->
+<section class="projects" id="Project">
+    <h2 class="heading">🚀 My Projects</h2>
+  
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Medici - Healthcare Assistant</h3>
+        <p>Medici is an AI-powered healthcare assistant designed to provide personalized medicine recommendations based on an individual’s symptoms and medical history. This platform leverages the power of artificial intelligence to analyze vast amounts of medical data and offer both generic and specialized medication options. It also provides guidance from expert doctors, who can answer questions and offer advice, ensuring that users get accurate and reliable healthcare support.</p>
+      </div>
+      <div class="project-card">
+        <h3>Kadam Chromatics - Color Design Startup</h3>
+        <p>Kadam Chromatics is a creative startup that focuses on providing unique, custom color palettes and design consultations for businesses in various industries. Whether you're looking to create a strong brand identity, develop stunning interior designs, or launch a new product line, Kadam Chromatics offers tailored color solutions that reflect your brand’s values and target audience. Our service not only includes the development of color schemes but also expert advice on color psychology, which plays a crucial role in customer perception and brand recognition.</p>
+      </div>
+      <div class="project-card">
+        <h3>Business Contracts Management System</h3>
+        <p>The Business Contracts Management System is an innovative AI-based platform designed to simplify the management of business contracts. This system allows businesses to manage their contracts efficiently by tracking important deadlines, renewal dates, and compliance issues. It uses machine learning algorithms to automatically detect risks and issues, ensuring that all contractual obligations are met on time and within the required legal frameworks. Additionally, the platform provides a secure environment for storing and accessing contracts, with features for document signing, sharing, and real-time updates.</p>
+      </div>
+    </div>
+  </section>
+  </body>
+</html>
