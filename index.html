@@ -304,6 +304,142 @@
         margin-top: 20px;
       }
     }
+
+    .skills-section {
+      background: #323946;
+      color: #7cf03d;
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 50px;
+    }
+    
+    .skills-section h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px;
+      justify-items: center;
+    
+    }
+    
+    .skill {
+      background: #343639;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(124, 240, 61, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    .skill:hover {
+      transform: translateY(-5px);
+    }
+    
+    .skill .circle {
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+    
+    .skill .circle svg {
+      width: 80px;
+      height: 80px;
+      transform: rotate(-90deg);
+    }
+    
+    .skill .circle circle {
+      fill: none;
+      stroke-width: 8;
+      stroke: #333;
+    }
+    
+    .skill .circle circle:nth-child(2) {
+      stroke: var(--clr);
+      stroke-dasharray: 220;
+      transition: stroke-dashoffset 1s;
+    }
+    
+    .skill .circle span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      font-size: 18px;
+    }
+    
+    .skill h3 {
+      margin-top: 15px;
+      font-size: 20px;
+    }
+    
+    .skill p {
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 10px;
+    }
+    
+    
+    
+    .contact {
+      padding: 100px 9% 50px;
+      background: #1f242d;
+      color: #fff;
+      text-align: center;
+    }
+    .contact .heading {
+      font-size: 55px;
+      color: #7cf03d;
+      margin-bottom: 30px;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 14px 20px;
+      font-size: 16px;
+      border: 2px solid #7cf03d;
+      border-radius: 10px;
+      background: #323946;
+      color: #fff;
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #cdd4e7;
+    }
+    
+    .footer {
+      background: slateblue;
+      padding: 25px 9%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      flex-wrap: wrap;
+    }
+    .footer p {
+      font-size: 18px;
+    }
+    .footer-links a {
+      margin-left: 15px;
+      font-size: 24px;
+      color: #fff;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover {
+      color: #7cf03d;
+    }
+    
+
+
   </style>
 </head>
 
@@ -330,11 +466,11 @@
       </p>
   
       <div class="btn-sci">
-        <a href="#" class="btn">Download CV</a>
+        <a href="Sweta Kadam (2).pdf" class="btn">Download CV</a>
         <div class="sci">
           <a href="https://www.linkedin.com/in/sweta-kadam-5851a4323/" target="_blank"><i class='bx bxl-linkedin'></i></a>
           <a href="https://github.com/Shweta-Tech-creator" target="_blank"><i class='bx bxl-github'></i></a>
-          <a href="#"><i class='bx bxl-snapchat'></i></a>
+          <a href="https://snapchat.com/t/U1509SVR"><i class='bx bxl-snapchat'></i></a>
         </div>
       </div>
     </div>
@@ -379,5 +515,124 @@
       </div>
     </div>
   </section>
+
+  <section class="skills-section" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <!-- Python -->
+      <div class="skill">
+        <div class="circle" style="--clr:#3776AB">
+          <svg>
+            <circle cx="40" cy="40" r="35"></circle>
+            <circle cx="40" cy="40" r="35" style="stroke-dashoffset: 22;"></circle>
+          </svg>
+          <span>90%</span>
+        </div>
+        <h3>Python</h3>
+        <p>Efficient scripting and backend development.</p>
+      </div>
+  
+      <!-- Java -->
+      <div class="skill">
+        <div class="circle" style="--clr:#b07219">
+          <svg>
+            <circle cx="40" cy="40" r="35"></circle>
+            <circle cx="40" cy="40" r="35" style="stroke-dashoffset: 33;"></circle>
+          </svg>
+          <span>85%</span>
+        </div>
+        <h3>Java</h3>
+        <p>Object-oriented programming and development.</p>
+      </div>
+  
+      <!-- JavaScript -->
+      <div class="skill">
+        <div class="circle" style="--clr:#f7df1e">
+          <svg>
+            <circle cx="40" cy="40" r="35"></circle>
+            <circle cx="40" cy="40" r="35" style="stroke-dashoffset: 22;"></circle>
+          </svg>
+          <span>90%</span>
+        </div>
+        <h3>JavaScript</h3>
+        <p>Dynamic and interactive web functionality.</p>
+      </div>
+  
+      <!-- HTML -->
+      <div class="skill">
+        <div class="circle" style="--clr:#e44d26">
+          <svg>
+            <circle cx="40" cy="40" r="35"></circle>
+            <circle cx="40" cy="40" r="35" style="stroke-dashoffset: 11;"></circle>
+          </svg>
+          <span>95%</span>
+        </div>
+        <h3>HTML</h3>
+        <p>Clean and semantic webpage structure.</p>
+      </div>
+  
+      <!-- CSS -->
+      <div class="skill">
+        <div class="circle" style="--clr:#264de4">
+          <svg>
+            <circle cx="40" cy="40" r="35"></circle>
+            <circle cx="40" cy="40" r="35" style="stroke-dashoffset: 11;"></circle>
+          </svg>
+          <span>95%</span>
+        </div>
+        <h3>CSS</h3>
+        <p>Beautiful and responsive design layouts.</p>
+      </div>
+  
+      <!-- SQL -->
+      <div class="skill">
+        <div class="circle" style="--clr:#f29111">
+          <svg>
+            <circle cx="40" cy="40" r="35"></circle>
+            <circle cx="40" cy="40" r="35" style="stroke-dashoffset: 44;"></circle>
+          </svg>
+          <span>80%</span>
+        </div>
+        <h3>SQL</h3>
+        <p>Database querying and data manipulation.</p>
+      </div>
+  
+      <!-- C++ -->
+      <div class="skill">
+        <div class="circle" style="--clr:#00599C">
+          <svg>
+            <circle cx="40" cy="40" r="35"></circle>
+            <circle cx="40" cy="40" r="35" style="stroke-dashoffset: 33;"></circle>
+          </svg>
+          <span>85%</span>
+        </div>
+        <h3>C++</h3>
+        <p>High-performance programming fundamentals.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2 class="heading">📩 Contact Me</h2>
+  <form class="contact-form" action="#" method="post">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Shweta Kadam | All rights reserved.</p>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/sweta-kadam-5851a4323/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+    <a href="https://github.com/Shweta-Tech-creator" target="_blank"><i class='bx bxl-github'></i></a>
+  </div>
+</footer>
+
+
   </body>
 </html>
